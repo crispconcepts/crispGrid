@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="jquery.1.11.1.min.js" type="text/javascript"></script>
+<script src="jquery.equalHeights.js" type="text/javascript"></script>
+<link rel="stylesheet" href="grid.css" />
+<style>
+*,*:before,*:after			{position:relative; padding:0; margin:0; box-sizing:border-box; -moz-box-sizing:border-box;}
+body						{padding:50px 0;}
+h1,h2,h3,h4,h5,h6			{line-height:1.2em; font-weight:100; font-family: "myriad-pro","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";}
+h1							{font-size:48px;}
+h2							{font-size:36px; color:#888;}
+h3							{font-size:30px;}
+h4							{font-size:24px;}
+h5							{font-size:20px;}
+h6							{font-size:16px;}
+p							{font-size:16px; line-height:1.75em; color:#888;}
+.blk						{background:#ccc; padding:10px;}
+.grid						{background:#efefef;}
+.grid .block				{background:#ddd;}
+.grid.full .row.full		{background:#ddd;}
+.grid.table .block .wrap	{padding:5px; border:1px solid #888;}
+.mtop						{margin-top:20px;}
+.product					{background:#222; color:#ddd;}
+.product div				{border:1px dotted #fff; padding:2px 5px;}
+</style>
+</head>
+
+<body>
+<div class="grid">
+	<div class="block sixteen">
+		<h1>Grid - Standard</h1>
+	</div>
+	<div class="block eight">
+		<p class="blk">Block Eight</p>
+	</div>
+	<div class="block eight">
+		<p class="blk">Block Eight</p>
+	</div>
+	<div class="block six">
+		<p class="blk">Block Six</p>
+	</div>
+	<div class="block four">
+		<p class="blk">Block Four</p>
+	</div>
+	<div class="block six">
+		<p class="blk">Block Six</p>
+	</div>
+</div>
+
+<div class="grid full mtop">
+	<div class="row full">
+		<div class="block sixteen">
+			<h1>Grid - Full</h1>
+			<p>Row - Full / Block - Sixteen</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="block sixteen">
+			<p>Row / Block - Sixteen</p>
+		</div>
+	</div>
+	<div class="row full">
+		<div class="block eight">
+			<p class="blk">Block Eight</p>
+		</div>
+		<div class="block eight">
+			<p class="blk">Block Eight</p>
+		</div>
+	</div>
+	<div class="row centered">
+		<div class="block fourteen">
+			<p class="blk">Row Centered</p>
+		</div>
+		<div class="block six">
+			<p class="blk">Block Six</p>
+		</div>
+		<div class="block four">
+			<p class="blk">Block Four</p>
+		</div>
+	</div>
+	<div class="grid">
+		<div class="block sixteen">
+			<h1>Grid - Nested</h1>
+		</div>
+		<div class="block eight">
+			<p class="blk">Block Eight</p>
+		</div>
+		<div class="block eight">
+			<p class="blk">Block Eight</p>
+		</div>
+		<div class="block six">
+			<p class="blk">Block Six</p>
+		</div>
+		<div class="block four">
+			<p class="blk">Block Four</p>
+		</div>
+		<div class="block six">
+			<p class="blk">Block Six</p>
+		</div>
+	</div>
+</div>
+
+<div class="grid table mtop">
+	<div class="row">
+		<div class="block sixteen">
+			<div class="wrap">
+				<h1>Grid - Table</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="block eight">
+			<div class="wrap">
+				<p>Block Eight</p>
+			</div>
+		</div>
+		<div class="block eight">
+			<div class="wrap">
+				<p>Block Eight</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="block six">
+			<div class="wrap">
+				<p>1 - Block Six</p>
+			</div>
+		</div>
+		<div class="block four">
+			<div class="wrap">
+				<p>1 - Block Four</p>
+			</div>
+		</div>
+		<div class="block six">
+			<div class="wrap">
+				<p>1<br/>2<br/>3 - Block Six<br/>4<br/>5</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div>
+
+<div class="grid table products mtop">
+	<div class="row">
+		<div class="block sixteen">
+			<div class="wrap">
+				<h1>Grid - Table ( Equal Height Product Demo )</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="block four">
+			<div class="wrap">
+				<div class="product">
+					<div class="i1 title"><p>Product 1 Title</p></div>
+					<div class="i2 image"><p>Product 1 Image</p></div>
+					<div class="i3 description"><p>Product 1 Description</p></div>
+					<div class="i4 button"><p>Product 1 Button</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="block four">
+			<div class="wrap">
+				<div class="product">
+					<div class="i1 title"><p>Product 2 <br/> Title</p></div>
+					<div class="i2 image"><p>Product 2 Image</p></div>
+					<div class="i3 description"><p>Product 2 Description</p></div>
+					<div class="i4 button"><p>Product 2 Button</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="block four">
+			<div class="wrap">
+				<div class="product">
+					<div class="i1 title"><p>Product 3 Title</p></div>
+					<div class="i2 image"><p>Product 3 Image</p></div>
+					<div class="i3 description"><p>Product 3 <br/> Description <br/> Extra line <br/> Extra line </p></div>
+					<div class="i4 button"><p>Product 3 Button</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="block four">
+			<div class="wrap">
+				<div class="product">
+					<div class="i1 title"><p>Product 4 <br/> Title</p></div>
+					<div class="i2 image"><p>Product 4 Image</p></div>
+					<div class="i3 description"><p>Product 4 Description</p></div>
+					<div class="i4 button"><p>Product 4 Button</p></div>
+				</div>
+			</div>
+		</div>
+	</div><!-- / .row -->
+</div><!-- / .grid -->
+
+<!-- div table heights -->
+<script src="jquery.equalHeights.js" type="text/javascript"></script>
+<script>
+$('.row .product .title p').equalHeights();
+$('.row .product .image p').equalHeights();
+$('.row .product .description p').equalHeights();
+$('.row .product .button p').equalHeights();
+</script>
+</body>
+</html>
